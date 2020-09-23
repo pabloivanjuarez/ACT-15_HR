@@ -28,13 +28,14 @@ app.get("/reserve", function (req, res) {
 });
 
 app.post("/reserve", function (req, res) {
+    console.log(req.body)
     let temp_obj = {
-        name: req.name,
-        phone_number: req.phone_number,
-        email: req.email,
-        id: req.id
+        name: req.body.name,
+        phone_number: req.body.phone,
+        email: req.body.email,
+        id: req.body.id
     }
-
+    console.log(temp_obj)
     tables.push(temp_obj);
 })
 
@@ -46,7 +47,9 @@ app.get("/api/tables", function (req, res) {
 
 
 app.get("/api/waitlist", function (req, res) {
-
+    let data = fs.readFileSync('dev/reservations.json', 'utf8');
+    data = JSON.parse(data)
+    res.json(data)
 })
 
 
