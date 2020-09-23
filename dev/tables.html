@@ -33,8 +33,30 @@
 
     </div>
 
+    <script type="text/javascript">
 
-    </div>
+        var searchedCharacter = $("#character-search").val().trim();
+
+        // Using a RegEx Pattern to remove spaces from searchedCharacter
+        // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
+        searchedCharacter = searchedCharacter.replace(/\s+/g, "").toLowerCase();
+
+        $.get("/api/tables/" + searchedCharacter, function (data) {
+            console.log(table);
+            if (table) {
+                $("#tableNumber").show();
+                $("#Name").text(table.name);
+                $("#Phone").text(table.phone);
+                $("#Email").text(table.email);
+                $("#UniqueId").text(table.id);
+            } else {
+                $("#name").text(
+                    "The force is NOT strong with this one. Your table is fucked  was not found.");
+                $("#stats").hide();
+            }
+        });
+
+    </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
