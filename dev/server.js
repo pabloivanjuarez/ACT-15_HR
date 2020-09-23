@@ -5,7 +5,7 @@ const fs = require("fs");
 const app = express();
 const PORT = 3000;
 
-const arr = [];
+const tables = [];
 
 app.use(express.urlencoded({
     extended: true
@@ -35,7 +35,7 @@ app.post("/reserve", function (req, res) {
         id: req.id
     }
 
-    // Save data here
+    tables.push(temp_obj);
 })
 
 app.get("/api/tables", function (req, res) {
