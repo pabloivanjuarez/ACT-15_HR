@@ -13,7 +13,7 @@ app.use(express.urlencoded({
 app.use(express.json());
 
 
-app.get("/", function (res, req) {
+app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, "home.html"));
 });
 
