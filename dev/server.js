@@ -28,15 +28,21 @@ app.get("/reserve", function (req, res) {
 });
 
 app.post("/reserve", function (req, res) {
-    console.log(req.body)
+    // console.log(req.body)
     let temp_obj = {
         name: req.body.name,
-        phone_number: req.body.phone,
+        phone: req.body.phone,
         email: req.body.email,
         id: req.body.id
     }
+
+    let data = fs.readFileSync('dev/reservations.json', 'utf8');
+    data = JSON.parse(data);
+    data.reservations.push(temp_obj);
+    fs.writeFileSync('dev/reservations.json', JSON.stringify(data));
+
     console.log(temp_obj)
-    tables.push(temp_obj);
+    // tables.push(temp_obj);
 })
 
 app.get("/api/tables", function (req, res) {
