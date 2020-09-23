@@ -1,5 +1,5 @@
 {
-  "name": "HR",
+  "name": "hr",
   "version": "1.0.0",
   "description": "A Node / Express based web applications for handling table reservation requests.",
   "main": "server.js",
@@ -14,6 +14,14 @@
     "start": "node server.js",
     "watch": "nodemon server.js"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "Andy Kalen Mason Pablo",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pabloivanjuarez/ACT-15_HR.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pabloivanjuarez/ACT-15_HR/issues"
+  },
+  "homepage": "https://github.com/pabloivanjuarez/ACT-15_HR#readme"
 }
