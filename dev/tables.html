@@ -42,8 +42,8 @@
         searchedCharacter = searchedCharacter.replace(/\s+/g, "").toLowerCase();
 
         $.get("/api/tables/" + searchedCharacter, function (data) {
-            console.log(table);
-            if (table) {
+            console.log(data);
+            if (data) {
                 $("#tableNumber").show();
                 $("#Name").text(table.name);
                 $("#Phone").text(table.phone);
