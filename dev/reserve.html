@@ -30,22 +30,22 @@
             <form>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Name</label>
-                    <input type="email" class="form-control" id="Name" aria-describedby="emailHelp">
+                    <input type="text" class="form-control" id="Name" aria-describedby="emailHelp">
 
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Phone Number</label>
-                    <input type="password" class="form-control" id="Phone">
+                    <input type="text" class="form-control" id="Phone">
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">email</label>
-                    <input type="password" class="form-control" id="Email">
+                    <input type="text" class="form-control" id="Email">
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
                         else.</small>
                 </div>
                 <div class="form-group">
                     <label for="exampleInputPassword1">Unique ID </label>
-                    <input type="password" class="form-control" id="UniqueId">
+                    <input type="text" class="form-control" id="UniqueId">
                 </div>
                 <div class="form-group form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -57,12 +57,11 @@
         </div>
 
         <script type="text/javascript">
-
             var resTables = {
                 name: $("#Name").val().trim(),
                 role: $("#Phone").val().trim(),
                 age: $("#Email").val().trim(),
-                forcePoints: $("#UniqueId").val().trim()S
+                forcePoints: $("#UniqueId").val().trim() S
             };
 
 
@@ -70,20 +69,18 @@
                 .then(function (data) {
                     console.log("reserve.html", data);
                 });
-
-
         </script>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
-            </script>
+        </script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
             integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
-            </script>
+        </script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
             integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
-            </script>
+        </script>
 </body>
 
 </html>
